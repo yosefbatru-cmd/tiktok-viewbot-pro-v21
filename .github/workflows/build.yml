@@ -1,4 +1,4 @@
-name: Build ViewBot Pro EXE
+name: Build ViewBot Pro v3.0 EXE
 
 on:
   push:
@@ -30,7 +30,7 @@ jobs:
       - name: Build EXE with PyInstaller
         run: |
           pyinstaller --noconfirm --onefile --windowed ^
-            --name "ViewBot_Pro_v2.1" ^
+            --name "ViewBot_Pro_v3.0" ^
             --icon NONE ^
             --add-data "src;src" ^
             --hidden-import=customtkinter ^
@@ -46,15 +46,15 @@ jobs:
       - name: Upload EXE artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ViewBot_Pro_v2.1-Windows
-          path: dist/ViewBot_Pro_v2.1.exe
+          name: ViewBot_Pro_v3.0-Windows
+          path: dist/ViewBot_Pro_v3.0.exe
           retention-days: 30
 
       - name: Create Release (on tag)
         if: startsWith(github.ref, 'refs/tags/')
         uses: softprops/action-gh-release@v2
         with:
-          files: dist/ViewBot_Pro_v2.1.exe
+          files: dist/ViewBot_Pro_v3.0.exe
           generate_release_notes: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

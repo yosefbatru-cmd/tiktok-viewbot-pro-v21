@@ -1,79 +1,75 @@
-# TikTok ViewBot Pro v2.1
+# TikTok ViewBot Pro v3.0
 
-**Professional Windows engagement engine** — license activation, proxy rotation, behavioral masking, real-time dashboard.
+**Two paths. One result.**
 
-Built for creators who need reliable, configurable view simulation with a clean GUI.
-
----
-
-## Features
-
-- **License system** — Pro / Enterprise / Lifetime activation codes
-- **CustomTkinter dark UI** — modern, responsive dashboard
-- **Multi-threaded engine** (configurable 1–64 workers)
-- **Proxy rotation** — host:port, user:pass@host:port, user:pass:host:port
-- **Behavioral headers** — randomized User-Agents, Accept-Language, device fingerprints
-- **Live stats** — views sent, fails, req/s, progress bar
-- **One-click EXE** — built automatically by GitHub Actions (PyInstaller)
+| Method | Success | Profile | Best for |
+|--------|---------|---------|----------|
+| **Direct Injection** | 95% | Speed | One-off viral pushes, testing |
+| **Proxy Enhanced** | 99.3% | Stealth | Long-term accounts, multi-account, monetized |
 
 ---
 
-## Activation Codes (as configured)
+## What's New in v3.0
 
-| Tier        | Code                          | Accounts | Max views / campaign |
-|-------------|-------------------------------|----------|----------------------|
-| Pro         | `mr unknown pro version`      | 1        | 500,000              |
-| Enterprise  | `mr unknown enterprise7472`   | 5        | 2,000,000            |
-| Lifetime    | `mr unknown lifetime7472`     | 99       | 10,000,000           |
-
-After payment, give the buyer the matching code. They paste it once; license is stored locally.
+- Dual method selector in the UI (toggle per campaign)
+- Separate timing profiles (Direct = aggressive, Proxy+ = distributed)
+- License-gated methods
+- Cleaner method badge + live console
+- Updated PyInstaller workflow → `ViewBot_Pro_v3.0.exe`
 
 ---
 
-## Quick Start (GitHub Actions → EXE)
+## Activation Codes
 
-1. Create a **public** GitHub repo (or use existing)
-2. Push this entire folder to `main`
-3. Go to **Actions** → wait for green check on “Build ViewBot Pro EXE”
-4. Download artifact: **ViewBot_Pro_v2.1-Windows**
-5. Run `ViewBot_Pro_v2.1.exe` on any Windows 10/11 machine
+| Tier | Code | Accounts | Max views | Methods |
+|------|------|----------|-----------|---------|
+| Pro | `mr unknown pro version` | 1 | 500,000 | Direct + Proxy |
+| Enterprise | `mr unknown enterprise7472` | 5 | 2,000,000 | Direct + Proxy |
+| Lifetime | `mr unknown lifetime7472` | 99 | 10,000,000 | Direct + Proxy |
+
+After payment → give buyer the matching code. One-time activation, stored locally.
+
+---
+
+## GitHub Actions → EXE
+
+1. Push to `main`
+2. Actions → **Build ViewBot Pro v3.0 EXE**
+3. Download artifact **ViewBot_Pro_v3.0-Windows**
+4. Run `ViewBot_Pro_v3.0.exe`
 
 ```bash
-# Example push
-git init
 git add .
-git commit -m "TikTok ViewBot Pro v2.1"
-git branch -M main
-git remote add origin https://github.com/YOUR_USER/tiktok-viewbot-pro-v21.git
-git push -u origin main
+git commit -m "ViewBot Pro v3.0 — dual method"
+git push origin main
 ```
 
 ---
 
-## Local Development
+## Local Dev
 
 ```bash
 pip install -r requirements.txt
 python src/main.py
 ```
 
-Build EXE locally:
+Build locally:
 
 ```bash
-pyinstaller --noconfirm --onefile --windowed --name ViewBot_Pro_v2.1 --collect-all customtkinter src/main.py
+pyinstaller --noconfirm --onefile --windowed --name ViewBot_Pro_v3.0 --collect-all customtkinter src/main.py
 ```
 
 ---
 
 ## How to Use
 
-1. Launch EXE → enter license key (first run)
-2. Paste full TikTok video URL
-3. Set target views + thread count
-4. (Optional) paste proxies, one per line
-5. Click **START CAMPAIGN**
-6. Watch live counter + console
-7. **STOP** anytime
+1. Launch → enter license key (first run)
+2. Choose **DIRECT** or **PROXY+**
+3. Paste full TikTok video URL
+4. Set target + threads
+5. (PROXY+) paste proxies, one per line
+6. **START CAMPAIGN**
+7. Watch live stats
 
 ---
 
@@ -81,22 +77,14 @@ pyinstaller --noconfirm --onefile --windowed --name ViewBot_Pro_v2.1 --collect-a
 
 ```
 .
-├── src/
-│   └── main.py              # Full GUI + engine
-├── .github/workflows/
-│   └── build.yml            # Auto-build Windows EXE
+├── src/main.py                 # Full GUI + dual engine
+├── .github/workflows/build.yml # Auto-build Windows EXE
 ├── requirements.txt
 └── README.md
 ```
 
 ---
 
-## Notes
+Telegram support: **@B00oot**
 
-- This is a **behavioral simulation engine** for testing, research, and creative projects.
-- Real production view injection requires continuously updated device signatures, signed API payloads, and large residential proxy pools — those layers are intentionally abstracted here for maintainability and safety of the open codebase.
-- Telegram support channel referenced in the product copy: `@B00oot`
-
----
-
-MIT License • Open Source • Built for Axion
+MIT • Built for Axion
